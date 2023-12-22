@@ -1,7 +1,7 @@
-const styles = (theme) => ({
+const mainStyles = (theme) => ({
   lightText: {
     color: theme.palette.secondary.light,
-    fontSize: '1rem',
+    fontWeight: 'bold',
   },
   primaryTitle: {
     color: theme.palette.primary.main,
@@ -17,11 +17,19 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.background.layout,
   },
   primaryBackground: {
-    backgroundColor: theme.background.default,
+    backgroundColor: theme.palette.background.default,
   },
   secondaryBackground: {
     backgroundColor: theme.palette.secondary.main,
   },
+  center: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  containerPadding: {
+    padding: '20px 0',
+  },
 });
 
-export default styles;
+export default mainStyles;

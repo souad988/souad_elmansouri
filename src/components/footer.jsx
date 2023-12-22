@@ -7,51 +7,37 @@ import Link from '@mui/material/Link';
 import clsx from 'clsx';
 import SocialMedia from './SocialMedia';
 import useCustomStyles from '../styles/customStyle';
-import styles from '../styles/index';
+import mainStyles from '../styles/index';
 
-function Copyright() {
+const Copyright = () => {
+  const classes = useCustomStyles(mainStyles);
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body2" className={clsx(classes.lightText)}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>
       {' '}
       {new Date().getFullYear()}
       .
     </Typography>
   );
-}
+};
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const Footer = () => {
-  const classes = useCustomStyles(styles);
+  const classes = useCustomStyles(mainStyles);
   return (
     <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
+      component="footer"
+      className={clsx(classes.layoutBackground, classes.containerPadding)}
     >
       <CssBaseline />
-      <Box
-        component="footer"
-        className={clsx(classes.layoutBackground)}
-        sx={{
-          py: 3,
-          px: 2,
-          mt: 'auto',
-        }}
-      >
-        <Container maxWidth="sm">
-          <Typography variant="body1" className={clsx(classes.lightText)}>
-            souadelmansouri2018@gmail.com
-          </Typography>
-          <SocialMedia />
-          <Copyright />
-        </Container>
-      </Box>
+      <Container maxWidth="sm">
+        <Typography variant="body1" className={clsx(classes.lightText)}>
+          souadelmansouri2018@gmail.com
+        </Typography>
+        <SocialMedia />
+        <Copyright />
+      </Container>
     </Box>
   );
 };
