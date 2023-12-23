@@ -20,6 +20,9 @@ const theme = createTheme({
       main: '#F1D4E5',
       light: '#FCE9F1',
     },
+    third: {
+      main: '#fff',
+    },
     background: {
       default: '#fff',
       layout: '#080202',

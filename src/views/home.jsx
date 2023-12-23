@@ -1,23 +1,25 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { Outlet } from 'react-router-dom';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import ProjectCard from '../components/projectCard';
+import Main from './main';
 
-function Home() {
-  return (
-    <Grid container>
-      <Grid item xs={12}>
-        <Header />
-      </Grid>
-      <Grid item xs={12}>
-        <ProjectCard />
-      </Grid>
-      <Grid item xs={12}>
-        <Footer />
-      </Grid>
+const Layout = () => (
+  <Grid container>
+    <Grid item xs={12}>
+      <Header />
     </Grid>
-  );
-}
+    <Grid item xs={12}>
+      <Main />
+    </Grid>
+    <Grid item xs={12}>
+      <Outlet />
+    </Grid>
+    <Grid item xs={12}>
+      <Footer />
+    </Grid>
+  </Grid>
+);
 
-export default Home;
+export default Layout;
