@@ -12,7 +12,9 @@ function Projects() {
   return (
     <Grid
       container
-      className={clsx(classes.spaceBetween, classes.marginTop, classes.verticalyCenter)}
+      className={clsx(classes.spaceBetween,
+        classes.marginTop, classes.verticalyCenter,
+        classes.leftCropedContainer)}
     >
       <Typography
         variant="h2"

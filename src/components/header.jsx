@@ -8,14 +8,14 @@ import mainStyles from '../styles';
 function Header() {
   const classes = useCustomStyles(mainStyles);
   return (
-    <Grid container className={clsx(classes.layoutBackground, classes.containerPadding)}>
+    <Grid container className={clsx(classes.boxShadow, classes.containerPadding)}>
       <Grid item xs={4}>
-        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} className={clsx(classes.primaryTitle, classes.logo)}>
+        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} className={clsx(classes.logo)}>
           Souad El Mansouri
         </Typography>
       </Grid>
-      <Grid justifyContent="center" alignItems="center" display='flex' item xs={8}>
-        <Grid container justifyContent="center" className={clsx(classes.borderContainer)} width={'60%'} >
+      <Grid justifyContent="center" alignItems="center" display="flex" item xs={8}>
+        <Grid container justifyContent="center" className={clsx(classes.borderContainer)} width="60%">
           <Link to="/main#aboutme" className={clsx(classes.link)}>
             About
           </Link>

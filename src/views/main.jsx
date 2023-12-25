@@ -1,5 +1,6 @@
-import { Container } from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react';
+import clsx from 'clsx';
 import AboutMe from '../components/AboutMe';
 import ContactMe from '../components/ContactMe';
 import Projects from './projects';
@@ -10,13 +11,13 @@ import mainStyles from '../styles';
 function Main() {
   const classes = useCustomStyles(mainStyles);
   return (
-    <Container>
+    <Box>
       <AboutMe />
       <SocialMedia />
-      <hr className={classes.devider} />
+      <hr className={clsx(classes.devider, classes.primaryTitle)} />
       <Projects />
       <ContactMe />
-    </Container>
+    </Box>
   );
 }
 

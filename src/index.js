@@ -13,12 +13,16 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#73BBC9',
+      main: '#0892ad',
       light: '#4296a5',
     },
     secondary: {
-      main: '#F1D4E5',
+      main: '#c5177d',
       light: '#FCE9F1',
+    },
+    headline: {
+      main: '#0892ad',
+      secondary: '#c5177d',
     },
     third: {
       main: '#fff',
@@ -27,6 +31,15 @@ const theme = createTheme({
       default: '#fff',
       layout: '#080202',
     },
+    text: {
+      primary: '#fff',
+      secondary: '#000',
+    },
+  },
+  fonts: {
+    primary: 'Roboto',
+    secondary: 'Lato',
+    headline: 'Prata',
   },
 });
 
